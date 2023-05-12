@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 
 import styles from "../../styles/[itemsdetailsId].module.css"
 
@@ -41,12 +42,16 @@ export async function getStaticPaths() {
 
 
 export default function Itemdetails({ items }) {
-
+    
     var price = parseFloat(items.price);
     return (
+        <>
+        <Head>
+            <title>{items.title}</title>
+        </Head>
         <div className={styles.box}>
             <div className={`${styles.img}`}>
-                <Image srcset={items.image} alt={items.title} width="200" height="200" />
+                <Image src={items.image} srcset={items.image} alt={items.title} width="200" height="200" />
             </div>
             <div className={`${styles.description}`}>
                 <h1>{items.title}</h1>
@@ -60,5 +65,7 @@ export default function Itemdetails({ items }) {
                 </div>
             </div>
         </div>
+        </>
+        
     )
 }

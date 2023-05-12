@@ -17,7 +17,7 @@ export default function Card({ clothes }) {
       </div>
       <div className={styles.item_description}>
         <h5>{clothes.title.substring(0,20)}...</h5>
-        <p>R$ {clothes.price}</p>
+        <p>R$ {clothes.price.toFixed(2)}</p>
         <Link href={`/itemsdetails/${clothes.id}`} className={styles.glow_on_hover}>Detalhes</Link>
       </div>
     </div>

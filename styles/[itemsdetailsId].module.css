@@ -7,11 +7,9 @@
     padding: 8em;
     gap: 10em;
     border-radius: 0.5%;
+    background-color: #fff;
     
 }
-
-
-
 .description {
     display: flex;
     flex-direction: column;
@@ -86,7 +84,7 @@
     text-decoration: none;
     width: 15vw;
     height: 3em;
-    border: 1px solid #0096FF;
+    
     outline: none;
     color: #fff;
     background: #464242;
