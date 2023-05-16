@@ -23,7 +23,7 @@ export async function getStaticProps() {
 
 export default function Home({ clothes }) {
   return (
-    <div className={styles.container}>
+    <>
     <Head>
     <title>Outlet Imports</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,6 +31,9 @@ export default function Home({ clothes }) {
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700;900&family=Oswald:wght@300&display=swap" rel="stylesheet" />
     
     </Head>
+    <div className={styles.container}>
+    
+
     <div className={styles.principal}>
         
         <div className={styles.item_container}>
@@ -41,6 +44,8 @@ export default function Home({ clothes }) {
       
     </div>
     </div>
+    </>
+    
     
   )
 }

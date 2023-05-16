@@ -11,6 +11,7 @@ export async function getStaticProps(context){
     const data = await fetch(api);
 
     const items = await data.json();
+    console.log(items.category);
     
     return {
         props: { items },
@@ -22,6 +23,7 @@ export async function getStaticPaths() {
     const response = await fetch('https://fakestoreapi.com/products/');
 
     const data = await response.json();
+    
 
     const paths = data.map((item) => {
         return {
@@ -51,7 +53,7 @@ export default function Itemdetails({ items }) {
         </Head>
         <div className={styles.box}>
             <div className={`${styles.img}`}>
-                <Image src={items.image} srcset={items.image} alt={items.title} width="200" height="200" />
+                <Image src={items.image} srcSet={items.image} alt={items.title} width="200" height="200" />
             </div>
             <div className={`${styles.description}`}>
                 <h1>{items.title}</h1>

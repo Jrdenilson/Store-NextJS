@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from "/styles/Navbar.module.css"
 
-export default function Navbar() {
+export default function Navbar({ clothes }) {
     return (
         <nav className={styles.navbar}>
             <Link href="/" className={styles.link}>
@@ -29,6 +29,7 @@ export default function Navbar() {
                         Contato
                     </Link>
                 </li>
+                
             </ul>
         </nav>
     )
